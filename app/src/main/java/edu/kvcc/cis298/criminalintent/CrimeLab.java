@@ -47,8 +47,7 @@ public class CrimeLab
 		return null;
 	}
 
-	// private methods
-	// singleton constructor
+	// private singleton constructor
 	private CrimeLab(Context context)
 	{
 		listCrimes = new ArrayList<Crime>();

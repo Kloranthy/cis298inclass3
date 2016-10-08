@@ -1,30 +1,38 @@
 package edu.kvcc.cis298.criminalintent;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
+
+import java.util.UUID;
 
 public class CrimeActivity
-		extends FragmentActivity
+	extends SingleFragmentActivity
 {
+	// public variables
+	public static final String EXTRA_CRIME_ID = "edu.kvcc.cis298.criminalintent.crime_id";
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState)
+	// public methods
+	public static Intent newIntent(
+		Context packageContext,
+		UUID crimeId
+											)
 	{
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_fragment);
+		Intent intent = new Intent(
+			packageContext,
+			CrimeActivity.class
+		);
+		intent.putExtra(
+			EXTRA_CRIME_ID,
+			crimeId
+							);
+		return intent;
+	}
 
-		FragmentManager fragmentManager = getSupportFragmentManager();
-
-		Fragment fragment = fragmentManager.findFragmentById(R.id.fragment_container);
-
-		if(fragment == null)
-		{
-			fragment = new CrimeFragment();
-			fragmentManager.beginTransaction()
-								.add(R.id.fragment_container, fragment)
-								.commit();
-		}
+	// protected methods
+	@Override
+	protected Fragment createFragment()
+	{
+		return new CrimeFragment();
 	}
 }

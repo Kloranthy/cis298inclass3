@@ -6,17 +6,20 @@ import java.util.UUID;
 
 public class Crime
 {
+	// private variables
 	private UUID    id;
 	private String  title;
 	private Date    date;
 	private boolean isSolved;
 
+	// public constructors
 	public Crime()
 	{
 		this.id = UUID.randomUUID();
 		date = new Date();
 	}
 
+	// public methods
 	public UUID getId()
 	{
 		return id;

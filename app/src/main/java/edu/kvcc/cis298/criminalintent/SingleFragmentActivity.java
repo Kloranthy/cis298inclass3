@@ -9,6 +9,7 @@ import android.support.v4.app.FragmentManager;
 public abstract class SingleFragmentActivity
 	extends FragmentActivity
 {
+	// public methods
 	@Override
 	public void onCreate(Bundle savedInstanceState)
 	{
@@ -28,5 +29,6 @@ public abstract class SingleFragmentActivity
 		}
 	}
 
+	// protected methods
 	protected abstract Fragment createFragment();
 }
