@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">CriminalIntent</string>
+	<!-- edittexts			et -->
     <string name="fragment_crime_et_title_hint">Enter a title for the crime.</string>
+	<!-- textviews			tv -->
+	<string name="fragment_crime_tv_crime_title">Title</string>
+	<string name="fragment_crime_tv_crime_details">Details</string>
+	<!-- buttons			btn -->
+	<!-- checkboxes		cb -->
+	<string name="fragment_crime_tv_crime_solved">Solved</string>
 </resources>

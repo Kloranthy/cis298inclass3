@@ -8,20 +8,27 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 
 
 public class CrimeFragment
 	extends Fragment
 {
-	private Crime crime;
+	// model variables
+	private Crime    crime;
+	// view variables
 	private EditText etTitle;
+	private Button   btnDate;
+	private CheckBox cbSolved;
 
 	@Override
 	public void onCreate(@Nullable Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
-		crime = new Crime("test");
+		crime = new Crime();
 	}
 
 	@Nullable
@@ -30,6 +37,7 @@ public class CrimeFragment
 									 @Nullable Bundle savedInstanceState)
 	{
 		View v = inflater.inflate(R.layout.fragment_crime, container, false);
+
 		etTitle = (EditText) v.findViewById(R.id.fragment_crime_et_title);
 		etTitle.addTextChangedListener(new TextWatcher()
 		{
@@ -51,6 +59,26 @@ public class CrimeFragment
 				// do nothing
 			}
 		});
+
+		btnDate = (Button) v.findViewById(R.id.fragment_crime_btn_crime_date);
+		btnDate.setText(
+			crime.getDate()
+				  .toString()
+							);
+		btnDate.setEnabled(false);
+
+		cbSolved = (CheckBox) v.findViewById(R.id.fragment_crime_cb_crime_solved);
+		cbSolved.setOnCheckedChangeListener(
+			new CompoundButton.OnCheckedChangeListener()
+			{
+				@Override
+				public void onCheckedChanged(CompoundButton btnView, boolean isChecked)
+				{
+					crime.setSolved(isChecked);
+				}
+			}
+													  );
+
 		return v;
 	}
 }
