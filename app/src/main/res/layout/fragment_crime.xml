@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-	xmlns:android = "http://schemas.android.com/apk/res/android"
-	android:layout_width = "match_parent"
-	android:layout_height = "match_parent"
-	android:orientation = "vertical"
+<LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+				  android:layout_width = "match_parent"
+				  android:layout_height = "match_parent"
+				  android:orientation = "vertical"
 	>
 
 	<TextView
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:text="@string/fragment_crime_tv_crime_title"
+		android:layout_width = "match_parent"
+		android:layout_height = "wrap_content"
+		android:text = "@string/fragment_crime_tv_crime_title"
 		/>
 
 	<EditText
@@ -20,26 +19,26 @@
 		/>
 
 	<TextView
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:text="@string/fragment_crime_tv_crime_details"
+		android:layout_width = "match_parent"
+		android:layout_height = "wrap_content"
+		android:text = "@string/fragment_crime_tv_crime_details"
 		/>
 
 	<Button
-		android:id="@+id/fragment_crime_btn_crime_date"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:layout_marginLeft="16dp"
-		android:layout_marginRight="16dp"
+		android:id = "@+id/fragment_crime_btn_crime_date"
+		android:layout_width = "match_parent"
+		android:layout_height = "wrap_content"
+		android:layout_marginLeft = "16dp"
+		android:layout_marginRight = "16dp"
 		/>
 
 	<CheckBox
-		android:id="@+id/fragment_crime_cb_crime_solved"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:layout_marginLeft="16dp"
-		android:layout_marginRight="16dp"
-		android:text="@string/fragment_crime_tv_crime_solved"
+		android:id = "@+id/fragment_crime_cb_crime_solved"
+		android:layout_width = "match_parent"
+		android:layout_height = "wrap_content"
+		android:layout_marginLeft = "16dp"
+		android:layout_marginRight = "16dp"
+		android:text = "@string/fragment_crime_tv_crime_solved"
 		/>
 
 </LinearLayout>

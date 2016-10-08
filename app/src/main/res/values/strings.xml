@@ -1,11 +1,17 @@
 <resources>
-    <string name="app_name">CriminalIntent</string>
-	<!-- edittexts			et -->
-    <string name="fragment_crime_et_title_hint">Enter a title for the crime.</string>
-	<!-- textviews			tv -->
-	<string name="fragment_crime_tv_crime_title">Title</string>
-	<string name="fragment_crime_tv_crime_details">Details</string>
-	<!-- buttons			btn -->
-	<!-- checkboxes		cb -->
-	<string name="fragment_crime_tv_crime_solved">Solved</string>
+	<string name = "app_name">CriminalIntent</string>
+	<!-- edittexts			et 	-->
+	<string name = "fragment_crime_et_title_hint">Enter a title for the crime.</string>
+	<!-- textviews			tv 	-->
+	<string name = "fragment_crime_tv_crime_title">Title</string>
+	<string name = "fragment_crime_tv_crime_details">Details</string>
+	<string name = "fragment_date_picker_tv_date_title">Date of crime:</string>
+	<!-- buttons			btn	-->
+	<!-- menus and menu items	-->
+	<string name = "fragment_crime_list_menu_item_new_crime">New Crime</string>
+	<string name = "fragment_crime_list_menu_item_show_subtitle">Show Subtitle</string>
+	<string name = "fragment_crime_list_menu_item_hide_subtitle">Hide Subtitle</string>
+	<string name = "subtitle_format">%1$s crimes</string>
+	<!-- checkboxes		cb		-->
+	<string name = "fragment_crime_tv_crime_solved">Solved</string>
 </resources>
