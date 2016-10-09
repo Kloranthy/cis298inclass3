@@ -110,6 +110,15 @@ class CrimeFragment
 			.getCrime( crimeId );
 	}
 
+	@Override
+	public
+	void onPause()
+	{
+		super.onPause();
+		CrimeLab.get( getActivity() )
+				  .updateCrime( crime );
+	}
+
 	@Nullable
 	@Override
 	public

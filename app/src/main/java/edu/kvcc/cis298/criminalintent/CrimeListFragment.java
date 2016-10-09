@@ -206,6 +206,7 @@ class CrimeListFragment
 		}
 		else
 		{
+			adapter.setCrimes(listCrimes);
 			adapter.notifyDataSetChanged();
 		}
 		updateSubtitle();
@@ -360,6 +361,14 @@ class CrimeListFragment
 		int getItemCount()
 		{
 			return listCrimes.size();
+		}
+
+		public
+		void setCrimes(
+			List<Crime> listCrimes
+						  )
+		{
+			this.listCrimes = listCrimes;
 		}
 	}
 }
