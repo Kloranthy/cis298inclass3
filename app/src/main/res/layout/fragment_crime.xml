@@ -8,7 +8,7 @@
 	<TextView
 		android:layout_width = "match_parent"
 		android:layout_height = "wrap_content"
-		android:text = "@string/fragment_crime_tv_crime_title"
+		android:text = "@string/fragment_crime_tv_title"
 		/>
 
 	<EditText
@@ -21,11 +21,11 @@
 	<TextView
 		android:layout_width = "match_parent"
 		android:layout_height = "wrap_content"
-		android:text = "@string/fragment_crime_tv_crime_details"
+		android:text = "@string/fragment_crime_tv_details"
 		/>
 
 	<Button
-		android:id = "@+id/fragment_crime_btn_crime_date"
+		android:id = "@+id/fragment_crime_btn_date"
 		android:layout_width = "match_parent"
 		android:layout_height = "wrap_content"
 		android:layout_marginLeft = "16dp"
@@ -33,12 +33,30 @@
 		/>
 
 	<CheckBox
-		android:id = "@+id/fragment_crime_cb_crime_solved"
+		android:id = "@+id/fragment_crime_cb_solved"
 		android:layout_width = "match_parent"
 		android:layout_height = "wrap_content"
 		android:layout_marginLeft = "16dp"
 		android:layout_marginRight = "16dp"
-		android:text = "@string/fragment_crime_tv_crime_solved"
+		android:text = "@string/fragment_crime_cb_solved"
+		/>
+
+	<Button
+		android:id = "@+id/fragment_crime_btn_suspect"
+		android:layout_width = "match_parent"
+		android:layout_height = "wrap_content"
+		android:layout_marginLeft = "16dp"
+		android:layout_marginRight = "16dp"
+		android:text="@string/fragment_crime_btn_suspect"
+		/>
+
+	<Button
+		android:id = "@+id/fragment_crime_btn_report"
+		android:layout_width = "match_parent"
+		android:layout_height = "wrap_content"
+		android:layout_marginLeft = "16dp"
+		android:layout_marginRight = "16dp"
+		android:text="@string/fragment_crime_btn_report"
 		/>
 
 </LinearLayout>

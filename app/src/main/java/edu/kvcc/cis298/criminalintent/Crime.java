@@ -15,7 +15,8 @@ class Crime
 	private Date
 		date;
 	private boolean
-		isSolved;
+		solved;
+	private String suspect;
 
 	// public constructors
 	public
@@ -72,13 +73,23 @@ class Crime
 	public
 	boolean isSolved()
 	{
-		return isSolved;
+		return solved;
 	}
 
 	public
 	void setSolved(boolean solved)
 	{
-		isSolved
+		this.solved
 			= solved;
+	}
+
+	public String getSuspect()
+	{
+		return suspect;
+	}
+
+	public void setSuspect(String suspect)
+	{
+		this.suspect = suspect;
 	}
 }

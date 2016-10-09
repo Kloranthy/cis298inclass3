@@ -50,6 +50,8 @@ class CrimeBaseHelper
 				+ CrimeTable.Cols.DATE
 				+ ", "
 				+ CrimeTable.Cols.SOLVED
+				+ ", "
+				+ CrimeTable.Cols.SUSPECT
 				+ ")"
 					  );
 	}

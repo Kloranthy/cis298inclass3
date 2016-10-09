@@ -55,6 +55,14 @@ class CrimeCursorWrapper
 					.SOLVED
 							  )
 									);
+		String suspect = getString(
+			getColumnIndex(
+				CrimeDbScema
+					.CrimeTable
+					.Cols
+					.SUSPECT
+							  )
+									  );
 
 		Crime crime
 			= new Crime(
@@ -68,6 +76,7 @@ class CrimeCursorWrapper
 		crime.setSolved(
 			isSolved != 0
 							);
+		crime.setSuspect( suspect );
 		return crime;
 	}
 }

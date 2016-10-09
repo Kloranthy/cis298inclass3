@@ -220,7 +220,7 @@ class CrimeListFragment
 			.size();
 		String subtitle = getString(
 			R.string.subtitle_format,
-			crimeCount
+			crimeCount + ""
 											);
 
 		if(!subtitleVisible)

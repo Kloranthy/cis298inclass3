@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -181,7 +182,7 @@ class CrimeFragment
 
 		btnDate
 			= (Button) view.findViewById(
-			R.id.fragment_crime_btn_crime_date
+			R.id.fragment_crime_btn_date
 												 );
 		updateDate();
 		btnDate.setOnClickListener(
@@ -213,7 +214,7 @@ class CrimeFragment
 
 		cbSolved
 			= (CheckBox) view.findViewById(
-			R.id.fragment_crime_cb_crime_solved
+			R.id.fragment_crime_cb_solved
 													);
 		cbSolved.setChecked( crime.isSolved() );
 		cbSolved.setOnCheckedChangeListener(
@@ -234,6 +235,16 @@ class CrimeFragment
 		return view;
 	}
 
+	public
+	void returnResult()
+	{
+		getActivity()
+			.setResult(
+				Activity.RESULT_OK,
+				null
+						 );
+	}
+
 	// private methods
 	private
 	void updateDate()
@@ -245,13 +256,52 @@ class CrimeFragment
 							);
 	}
 
-	public
-	void returnResult()
+	private String getCrimeReport()
 	{
-		getActivity()
-			.setResult(
-				Activity.RESULT_OK,
-				null
-						 );
+		String solved = null;
+		if(crime.isSolved())
+		{
+			solved = getString(
+				R.string.crime_report_solved
+									);
+		}
+		else
+		{
+			solved = getString(
+				R.string.crime_report_unsolved
+									);
+		}
+
+		String dateFormat = "EEE, MMM, dd";
+		String date = DateFormat
+			.format(
+				dateFormat,
+				crime.getDate()
+					 )
+			.toString();
+
+		String suspect = crime.getSuspect();
+		if(suspect == null)
+		{
+			suspect = getString(
+				R.string.crime_report_no_suspect
+									 );
+		}
+		else
+		{
+			suspect = getString(
+				R.string.crime_report_suspect, suspect
+									 );
+		}
+
+		String report = getString(
+			R.string.crime_report,
+			crime.getTitle(),
+			date,
+			solved,
+			suspect
+										 );
+
+		return report;
 	}
 }

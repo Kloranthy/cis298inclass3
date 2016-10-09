@@ -178,6 +178,10 @@ class CrimeLab
 			? 1
 			: 0
 					 );
+		values.put(
+			CrimeTable.Cols.SUSPECT,
+			crime.getSuspect()
+					 );
 		return values;
 	}
 
