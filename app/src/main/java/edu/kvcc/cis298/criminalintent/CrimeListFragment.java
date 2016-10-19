@@ -254,7 +254,7 @@ class CrimeListFragment
 		public
 		CrimeHolder(View viewItem)
 		{
-			super( viewItem );
+			super(viewItem);
 
 			viewItem.setOnClickListener( this );
 

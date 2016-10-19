@@ -24,10 +24,10 @@ class CrimePagerActivity
 		EXTRA_CRIME_ID
 		=
 		"edu.kvcc.cis298.criminalintent.crime_id";
-
-	// view variables
 	private List< Crime >
 		listCrimes;
+
+	// view variables
 	private ViewPager
 		viewPager;
 
